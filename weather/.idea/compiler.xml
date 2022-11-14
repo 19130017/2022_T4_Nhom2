@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="weather" />
+        <module name="weather_ui" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="weather" target="1.8" />
+      <module name="weather_ui" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
