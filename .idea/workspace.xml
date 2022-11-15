@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c2d244f-d645-49b0-b403-da830fb23732" name="Changes" comment="" />
+    <list default="true" id="5c2d244f-d645-49b0-b403-da830fb23732" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/weather_crawl/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +34,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668410783634</updated>
       <workItem from="1668410784888" duration="181000" />
+      <workItem from="1668504344582" duration="17000" />
     </task>
     <servers />
   </component>
