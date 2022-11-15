@@ -132,6 +132,36 @@ public class DAO {
         }
     }
 
+    public boolean truncateStagingFact() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.TRUNCATE_STAGING_FACT);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean deleteNaturalKey() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.DELETE_NATURAL_KEY_NULL);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean addStagingFact() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.ADD_STAGING_FACT);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
     public boolean loadFileIntoStaging(String fileLocalPath) {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.STAGING.LOAD_FILE_INTO_STAGING_DIM);

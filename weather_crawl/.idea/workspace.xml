@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="87754da8-4a5c-49c7-b502-c07b0703467a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/FTPService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/FTPService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/FileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/FileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/CrawlDataTTVN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/constants/QUERY$STAGING.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/QUERY$STAGING.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/CrawlDataTTVN.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +104,8 @@
       <workItem from="1668492161228" duration="12064000" />
       <workItem from="1668504369497" duration="421000" />
       <workItem from="1668504805879" duration="3000" />
-      <workItem from="1668514275903" duration="5282000" />
+      <workItem from="1668514275903" duration="6981000" />
+      <workItem from="1668550289796" duration="2341000" />
     </task>
     <servers />
   </component>

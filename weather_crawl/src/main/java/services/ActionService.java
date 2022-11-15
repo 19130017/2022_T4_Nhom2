@@ -13,20 +13,13 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.text.Normalizer;
-import java.util.regex.Pattern;
 
-public class CrawlDataTTVN {
+public class ActionService {
+    ConnectMySQL connectStagingDB = new ConnectMySQL(DBConstants.STAGING);
+    java.sql.Connection connectionStagingDB = connectStagingDB.getConnection();
+    DAO dao = new DAO(connectionStagingDB);
 
-    private String sourceName;
-    private String sourcePath;
-
-    public CrawlDataTTVN(String sourceName, String sourcePath) {
-        this.sourceName = sourceName;
-        this.sourcePath = sourcePath;
-    }
-
-    public String crawl() throws IOException {
+    public String crawl(String sourceName, String sourcePath) throws IOException {
         boolean success = false;
         DateService dateService = new DateService();
         FileService fileService = new FileService();
@@ -35,10 +28,6 @@ public class CrawlDataTTVN {
 
         Connection con = Jsoup.connect(sourcePath).timeout(3000);
         Document doc = con.get();
-
-        ConnectMySQL connectStagingDB = new ConnectMySQL(DBConstants.STAGING);
-        java.sql.Connection connectionStagingDB = connectStagingDB.getConnection();
-        DAO dao = new DAO(connectionStagingDB);
 
         Elements elements = doc.select(".mega-submenu li a[href]");
         for (Element e : elements) {
@@ -78,4 +67,26 @@ public class CrawlDataTTVN {
 
         return success ? fileName : null;
     }
+
+    public boolean loadFile(String fileLocalPath) {
+        FileService fileService = new FileService();
+
+        dao.truncateStaging();
+        boolean check = dao.loadFileIntoStaging(fileLocalPath);
+
+        fileService.deleteFileLocal(fileLocalPath);
+        return check;
+    }
+
+    public boolean transform() {
+        dao.truncateStagingFact();
+        // transform delete naturalKey = null
+
+        if (dao.deleteNaturalKey()) {
+            // transform join dim
+            return dao.addStagingFact();
+        }
+        return false;
+    }
+
 }

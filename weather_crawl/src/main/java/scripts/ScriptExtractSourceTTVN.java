@@ -9,7 +9,7 @@ import dao.DAO;
 import entities.control.Config;
 import entities.control.Log;
 
-import services.CrawlDataTTVN;
+import services.ActionService;
 import services.DateService;
 import services.FileService;
 
@@ -22,7 +22,7 @@ public class ScriptExtractSourceTTVN {
         ConnectMySQL connectControlDB = new ConnectMySQL(DBConstants.CONTROL);
         Connection connectionControlDB = connectControlDB.getConnection();
         FileService fileService = new FileService();
-
+        ActionService actionService = new ActionService();
         DAO dao = new DAO(connectionControlDB);
         Config config = dao.getConfig(StrConstants.SOURCE_NAME_TTVN);
 
@@ -31,10 +31,9 @@ public class ScriptExtractSourceTTVN {
 
         if (log == null) {
             dao.addLog(config.getId(), null, dateService.getDateCrawl(dateService.getDate()), dateService.getHour(), Status.EXTRACT_STARTING, StrConstants.AUTHOR1);
-            CrawlDataTTVN sourceTTVN = new CrawlDataTTVN(config.getSourceName(), config.getSourcePath());
 
             try {
-                String fileName = sourceTTVN.crawl();
+                String fileName = actionService.crawl(config.getSourceName(), config.getSourcePath());
                 String localPath = StrConstants.LOCAL_STORAGE.concat(fileName);
 
                 if (!fileName.isEmpty()) {
