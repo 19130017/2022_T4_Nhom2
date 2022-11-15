@@ -36,7 +36,10 @@ public class FileService {
     }
 
     // download file from server
-    public String downloadCSV(String ip, String username, String password) {
+    public String downloadCSV(String ip, String username, String password, String fileLocalPath, String remoteFileName) throws IOException {
+        FTPService ftpService = new FTPService();
+        ftpService.downloadFileFTP(ip, username, password, fileLocalPath, remoteFileName);
+
         return null;
     }
 
