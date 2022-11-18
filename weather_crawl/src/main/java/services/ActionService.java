@@ -25,7 +25,6 @@ public class ActionService {
         FileService fileService = new FileService();
         String fileName = sourceName.concat("_" + dateService.getFileName());
 
-
         Connection con = Jsoup.connect(sourcePath).timeout(3000);
         Document doc = con.get();
 
@@ -65,7 +64,7 @@ public class ActionService {
             }
         }
 
-        return success ? fileName : null;
+        return success ? fileName : fileName + ".err";
     }
 
     public boolean loadFile(String fileLocalPath) {
@@ -79,14 +78,38 @@ public class ActionService {
     }
 
     public boolean transform() {
-        dao.truncateStagingFact();
         // transform delete naturalKey = null
+        dao.deleteNaturalKey();
 
-        if (dao.deleteNaturalKey()) {
-            // transform join dim
-            return dao.addStagingFact();
-        }
-        return false;
+        dao.truncateStagingFact();
+        // transform join dim
+        return dao.addStagingFact();
+
     }
 
+    public void load(String dateDimPath, String provinceDimPath, String factPath) {
+        ConnectMySQL connectDwh = new ConnectMySQL(DBConstants.DATA_WAREHOUSE);
+        java.sql.Connection connectionDwh = connectDwh.getConnection();
+        DAO dao = new DAO(connectionDwh);
+
+        int count = dao.getCountDateDim();
+        if (count == 0) dao.loadFileDateDim(dateDimPath);
+
+        count = dao.getCountProvinceDim();
+        if (count == 0) dao.loadFileProvinceDim(provinceDimPath);
+
+        count = dao.getCountFact();
+        if (count == 0) {
+            dao.loadFileFact(factPath);
+        } else {
+            boolean success = dao.updateExpired();
+            if (success) dao.loadFileFact(factPath);
+        }
+    }
+
+    public void exportFile(String dateDimPath, String provinceDimPath, String factPath) {
+        dao.exportFileDateDim(dateDimPath);
+        dao.exportFileProvinceDim(provinceDimPath);
+        dao.exportFileStagingFact(factPath);
+    }
 }

@@ -36,15 +36,15 @@ public class ScriptTransformStaging {
 
                 // load file into staging_dim
                 boolean check = actionService.loadFile(fileLocalPath);
-                if (check) log.setStatus(Status.EXTRACT_SUCCESSFUL);
-                else log.setStatus(Status.EXTRACT_NULL);
+                if (check) {
+                    log.setStatus(Status.EXTRACT_SUCCESSFUL);
+                    dao.updateLog(log);
 
-                dao.updateLog(log);
-
-                // transform
-                actionService.transform();
-                log.setStatus(Status.TRANSFORM);
-                dao.updateLog(log);
+                    // transform
+                    actionService.transform();
+                    log.setStatus(Status.TRANSFORM);
+                    dao.updateLog(log);
+                } else log.setStatus(Status.EXTRACT_ERROR);
             } catch (IOException e) {
                 e.printStackTrace();
             }

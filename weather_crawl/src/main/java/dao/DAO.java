@@ -61,15 +61,14 @@ public class DAO {
         return null;
     }
 
-    public boolean addLog(int id, String fileName, Date dateCrawl, int hour, String status, String author) {
+    public boolean addLog(int id, Date dateCrawl, int hour, String status, String author) {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.CONTROL.CREATE_LOG);
             statement.setInt(1, id);
-            statement.setString(2, fileName);
-            statement.setDate(3, new java.sql.Date(dateCrawl.getTime()));
-            statement.setInt(4, hour);
-            statement.setString(5, status);
-            statement.setString(6, author);
+            statement.setDate(2, new java.sql.Date(dateCrawl.getTime()));
+            statement.setInt(3, hour);
+            statement.setString(4, status);
+            statement.setString(5, author);
             return statement.executeUpdate() == 1 ? true : false;
         } catch (SQLException e) {
             e.printStackTrace();
@@ -171,5 +170,123 @@ public class DAO {
             e.printStackTrace();
             return false;
         }
+    }
+
+    // load
+    public boolean exportFileDateDim(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.EXPORT_FILE_DATE_DIM);
+            statement.setString(1, fileLocalPath);
+            statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean exportFileProvinceDim(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.EXPORT_FILE_PROVINCE_DIM);
+            statement.setString(1, fileLocalPath);
+            statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean exportFileStagingFact(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.STAGING.EXPORT_FILE_STAGING_FACT);
+            statement.setString(1, fileLocalPath);
+            statement.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+
+    public boolean loadFileFact(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.LOAD_FILE_INTO_FACT);
+            statement.setString(1, fileLocalPath);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean loadFileDateDim(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.LOAD_FILE_DATE_DIM);
+            statement.setString(1, fileLocalPath);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public boolean loadFileProvinceDim(String fileLocalPath) {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.LOAD_FILE_PROVINCE_DIM);
+            statement.setString(1, fileLocalPath);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public int getCountDateDim() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.COUNT_DATE_DIM);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public int getCountProvinceDim() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.COUNT_PROVINCE_DIM);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    public int getCountFact() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.COUNT_FACT_WEATHER);
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                return rs.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+
+    public boolean updateExpired() {
+        try {
+            CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.UPDATE_EXPIRED);
+            return statement.executeUpdate() != 0 ? true : false;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 }
