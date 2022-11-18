@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="weather_crawl:load" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87754da8-4a5c-49c7-b502-c07b0703467a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/weather_crawl_extractTTVN.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/weather_crawl_load.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/weather_crawl_transform.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ActionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/QUERY$CONTROL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/QUERY$CONTROL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/QUERY$STAGING.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/QUERY$STAGING.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/QUERY.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/QUERY.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/scripts/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/services/ActionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ActionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +55,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -114,7 +107,8 @@
       <workItem from="1668652974285" duration="6412000" />
       <workItem from="1668665307326" duration="5983000" />
       <workItem from="1668722634688" duration="636000" />
-      <workItem from="1668756294003" duration="4022000" />
+      <workItem from="1668756294003" duration="4414000" />
+      <workItem from="1668760947912" duration="50000" />
     </task>
     <servers />
   </component>
