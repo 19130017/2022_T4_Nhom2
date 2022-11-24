@@ -4,19 +4,22 @@ import java.util.Date;
 
 public class Log {
     private int id;
-    private String fileName;
-    private String timeZone;
-    private Date dateCrawl;
-    private int hourCrawl;
+    private String file_name;
+    private String time_zone;
+    private Date date_crawl;
+    private int hour_crawl;
     private String status;
     private String author;
 
-    public Log(int id, String fileName, String timeZone, Date dateCrawl, int hourCrawl, String status, String author) {
+    public Log() {
+    }
+
+    public Log(int id, String file_name, String time_zone, Date date_crawl, int hour_crawl, String status, String author) {
         this.id = id;
-        this.fileName = fileName;
-        this.timeZone = timeZone;
-        this.dateCrawl = dateCrawl;
-        this.hourCrawl = hourCrawl;
+        this.file_name = file_name;
+        this.time_zone = time_zone;
+        this.date_crawl = date_crawl;
+        this.hour_crawl = hour_crawl;
         this.status = status;
         this.author = author;
     }
@@ -29,36 +32,36 @@ public class Log {
         this.id = id;
     }
 
-    public String getFileName() {
-        return fileName;
+    public String getFile_name() {
+        return file_name;
     }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
+    public void setFile_name(String file_name) {
+        this.file_name = file_name;
     }
 
-    public String getTimeZone() {
-        return timeZone;
+    public String getTime_zone() {
+        return time_zone;
     }
 
-    public void setTimeZone(String timeZone) {
-        this.timeZone = timeZone;
+    public void setTime_zone(String time_zone) {
+        this.time_zone = time_zone;
     }
 
-    public Date getDateCrawl() {
-        return dateCrawl;
+    public Date getDate_crawl() {
+        return date_crawl;
     }
 
-    public void setDateCrawl(Date dateCrawl) {
-        this.dateCrawl = dateCrawl;
+    public void setDate_crawl(Date date_crawl) {
+        this.date_crawl = date_crawl;
     }
 
-    public int getHourCrawl() {
-        return hourCrawl;
+    public int getHour_crawl() {
+        return hour_crawl;
     }
 
-    public void setHourCrawl(int hourCrawl) {
-        this.hourCrawl = hourCrawl;
+    public void setHour_crawl(int hour_crawl) {
+        this.hour_crawl = hour_crawl;
     }
 
     public String getStatus() {
@@ -75,18 +78,5 @@ public class Log {
 
     public void setAuthor(String author) {
         this.author = author;
-    }
-
-    @Override
-    public String toString() {
-        return "FileLog{" +
-                "id=" + id +
-                ", fileName='" + fileName +
-                ", timeZone='" + timeZone +
-                ", dateCrawl=" + dateCrawl +
-                ", hourCrawl=" + hourCrawl +
-                ", status='" + status +
-                ", author='" + author +
-                '}';
     }
 }

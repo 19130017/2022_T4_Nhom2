@@ -3,7 +3,7 @@ package constants;
 public class QUERY {
     public static class CONTROL {
         public static final String GET_CONFIG = "CALL proc_get_config(?);";
-        public static final String GET_LOG = "CALL proc_get_log(?,?);";
+        public static final String GET_LOG = "CALL proc_get_log(?,?,?);";
         public static final String UPDATE_LOG = "CALL proc_update_log(?, ?, ?);";
         public static final String CREATE_LOG = "CALL proc_add_log(?, ?, ?, ?, ?);";
     }
@@ -25,7 +25,7 @@ public class QUERY {
     }
 
     public static class DATA_WAREHOUSE {
-        public static final String LOAD_FILE_INTO_FACT = "LOAD DATA INFILE ? INTO TABLE fact_weather FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' (naturalKey, forecastDateId, provinceId, description, minTemperature, maxTemperature, humidity,windSpeed, sunrise, sundown);";
+        public static final String LOAD_FILE_INTO_FACT = "LOAD DATA INFILE ? INTO TABLE fact_weather FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n' (natural_key, forecast_date_id, province_id, description, min_temperature, max_temperature, humidity, wind_speed, sunrise, sundown);";
 
         public static final String LOAD_FILE_DATE_DIM = "LOAD DATA INFILE ? INTO TABLE date_dim FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';";
         public static final String LOAD_FILE_PROVINCE_DIM = "LOAD DATA INFILE ? INTO TABLE province_dim FIELDS TERMINATED BY ',' ENCLOSED BY '\"' LINES TERMINATED BY '\n';";

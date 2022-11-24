@@ -26,20 +26,20 @@ public class ScriptExtractSourceTTVN {
         DAO dao = new DAO(connectionControlDB);
 
         DateService dateService = new DateService();
-        Log log = dao.getLog(dateService.getHour(), Status.EXTRACT_STARTING);
+        Log log = dao.getLog(dateService.getHour(), Status.EXTRACT_STARTING, dateService.getDateCrawl(dateService.getDate()));
         if (log == null) {
             Config config = dao.getConfig(StrConstants.SOURCE_NAME_TTVN);
             dao.addLog(config.getId(), dateService.getDateCrawl(dateService.getDate()), dateService.getHour(), Status.EXTRACT_STARTING, StrConstants.AUTHOR1);
 
             try {
-                String fileName = actionService.crawl(config.getSourceName(), config.getSourcePath());
+                String fileName = actionService.crawl(config.getSource_name(), config.getSource_path());
                 String localPath = null;
 
                 if (!fileName.endsWith(".err")) {
                     localPath = StrConstants.LOCAL_STORAGE.concat(fileName);
-                    log = dao.getLog(dateService.getHour(), Status.EXTRACT_STARTING);
-                    fileService.sendFileFTP(config.getIpFTP(), config.getUsernameFTP(), config.getPasswordFTP(), localPath, fileName, dateService.getDateWithDelimited());
-                    log.setFileName(fileName);
+                    log = dao.getLog(dateService.getHour(), Status.EXTRACT_STARTING, dateService.getDateCrawl(dateService.getDate()));
+                    fileService.sendFileFTP(config.getFtp_ip(), config.getFtp_username(), config.getFtp_password(), localPath, fileName, dateService.getDateWithDelimited());
+                    log.setFile_name(fileName);
                     log.setStatus(Status.EXTRACT_READY);
                     dao.updateLog(log);
                 } else {

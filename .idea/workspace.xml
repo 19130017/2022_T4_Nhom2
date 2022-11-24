@@ -1,10 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5c2d244f-d645-49b0-b403-da830fb23732" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/weather_crawl/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="ba7df176-c856-47fc-8e4f-a17efd6a38f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/2022_T4_Nhom2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/weather_crawl/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_load/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_load/weather_crawl.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_transform/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/out/artifacts/weather_crawl_transform/weather_crawl.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/constants/QUERY.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/constants/QUERY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/entities/control/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/entities/control/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptExtractSourceTTVN.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptExtractSourceTTVN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptLoadStagingDWH.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptLoadStagingDWH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptTransformStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/ScriptTransformStaging.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/src/main/java/scripts/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/constants/QUERY$CONTROL.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/constants/QUERY$CONTROL.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/dao/DAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/entities/control/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/entities/control/Log.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptExtractSourceTTVN.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptExtractSourceTTVN.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptLoadStagingDWH.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptLoadStagingDWH.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptTransformStaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/weather_crawl/target/classes/scripts/ScriptTransformStaging.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +35,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="2HWpdhQrNT3K8pKVM3DHgTfwFjc" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Hz1aEdc78zlj8S7BwfcxTsgFRz" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,18 +47,16 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5c2d244f-d645-49b0-b403-da830fb23732" name="Changes" comment="" />
-      <created>1668410783634</created>
+      <changelist id="ba7df176-c856-47fc-8e4f-a17efd6a38f4" name="Changes" comment="" />
+      <created>1669273159903</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668410783634</updated>
-      <workItem from="1668410784888" duration="181000" />
-      <workItem from="1668504344582" duration="17000" />
+      <updated>1669273159903</updated>
+      <workItem from="1669273161147" duration="29000" />
     </task>
     <servers />
   </component>

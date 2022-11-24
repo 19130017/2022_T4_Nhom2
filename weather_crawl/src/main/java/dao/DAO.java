@@ -27,11 +27,11 @@ public class DAO {
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 return new Config(rs.getInt("id"),
-                        rs.getString("sourceName"),
-                        rs.getString("sourcePath"),
-                        rs.getString("ipFTP"),
-                        rs.getString("usernameFTP"),
-                        rs.getString("passwordFTP"));
+                        rs.getString("source_name"),
+                        rs.getString("source_path"),
+                        rs.getString("ftp_ip"),
+                        rs.getString("ftp_username"),
+                        rs.getString("ftp_password"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -39,18 +39,19 @@ public class DAO {
         return null;
     }
 
-    public Log getLog(int hour, String status) {
+    public Log getLog(int hour, String status, Date date) {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.CONTROL.GET_LOG);
             statement.setInt(1, hour);
             statement.setString(2, status);
+            statement.setDate(3, new java.sql.Date(date.getTime()));
             ResultSet rs = statement.executeQuery();
             if (rs.next()) {
                 return new Log(rs.getInt("id"),
-                        rs.getString("fileName"),
-                        rs.getString("timeZone"),
-                        rs.getDate("dateCrawl"),
-                        rs.getInt("hourCrawl"),
+                        rs.getString("file_name"),
+                        rs.getString("time_zone"),
+                        rs.getDate("date_crawl"),
+                        rs.getInt("hour_crawl"),
                         rs.getString("status"),
                         rs.getString("author")
                 );
@@ -61,11 +62,11 @@ public class DAO {
         return null;
     }
 
-    public boolean addLog(int id, Date dateCrawl, int hour, String status, String author) {
+    public boolean addLog(int id, Date date_crawl, int hour, String status, String author) {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.CONTROL.CREATE_LOG);
             statement.setInt(1, id);
-            statement.setDate(2, new java.sql.Date(dateCrawl.getTime()));
+            statement.setDate(2, new java.sql.Date(date_crawl.getTime()));
             statement.setInt(3, hour);
             statement.setString(4, status);
             statement.setString(5, author);
@@ -84,7 +85,7 @@ public class DAO {
             if (rs.next()) {
                 return new ProvinceDim(rs.getInt("id"),
                         rs.getString("name"),
-                        rs.getString("codeName"));
+                        rs.getString("code_name"));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,7 +113,7 @@ public class DAO {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.CONTROL.UPDATE_LOG);
             statement.setInt(1, log.getId());
-            statement.setString(2, log.getFileName());
+            statement.setString(2, log.getFile_name());
             statement.setString(3, log.getStatus());
             return statement.executeUpdate() == 1 ? true : false;
         } catch (SQLException e) {
@@ -211,6 +212,7 @@ public class DAO {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.LOAD_FILE_INTO_FACT);
             statement.setString(1, fileLocalPath);
+            System.out.println("hello");
             return statement.executeUpdate() != 0 ? true : false;
         } catch (SQLException e) {
             e.printStackTrace();

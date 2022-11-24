@@ -21,7 +21,7 @@ public class ScriptLoadStagingDWH {
         ActionService actionService = new ActionService();
         DateService dateService = new DateService();
         FileService fileService = new FileService();
-        Log log = dao.getLog(dateService.getHour(), Status.TRANSFORM);
+        Log log = dao.getLog(dateService.getHour(), Status.TRANSFORM, dateService.getDateCrawl(dateService.getDate()));
 
         if (log != null) {
             String dateDimPath = StrConstants.LOCAL_STORAGE.concat("date_dim.csv");
@@ -31,8 +31,8 @@ public class ScriptLoadStagingDWH {
             actionService.exportFile(dateDimPath, provinceDimPath, factPath);
 
             actionService.load(dateDimPath, provinceDimPath, factPath);
-            log.setStatus(Status.LOADED);
-            dao.updateLog(log);
+//            log.setStatus(Status.LOADED);
+//            dao.updateLog(log);
 
             fileService.deleteFileLocal(dateDimPath);
             fileService.deleteFileLocal(provinceDimPath);

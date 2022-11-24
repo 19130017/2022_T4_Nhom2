@@ -91,7 +91,6 @@ public class ActionService {
         ConnectMySQL connectDwh = new ConnectMySQL(DBConstants.DATA_WAREHOUSE);
         java.sql.Connection connectionDwh = connectDwh.getConnection();
         DAO dao = new DAO(connectionDwh);
-
         int count = dao.getCountDateDim();
         if (count == 0) dao.loadFileDateDim(dateDimPath);
 
@@ -103,6 +102,7 @@ public class ActionService {
             dao.loadFileFact(factPath);
         } else {
             boolean success = dao.updateExpired();
+            System.out.println(success);
             if (success) dao.loadFileFact(factPath);
         }
     }
