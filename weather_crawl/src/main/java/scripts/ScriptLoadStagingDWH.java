@@ -31,8 +31,9 @@ public class ScriptLoadStagingDWH {
             actionService.exportFile(dateDimPath, provinceDimPath, factPath);
 
             actionService.load(dateDimPath, provinceDimPath, factPath);
-//            log.setStatus(Status.LOADED);
-//            dao.updateLog(log);
+            log.setStatus(Status.LOADED);
+            dao.updateLog(log);
+            System.out.println("Done load!");
 
             fileService.deleteFileLocal(dateDimPath);
             fileService.deleteFileLocal(provinceDimPath);

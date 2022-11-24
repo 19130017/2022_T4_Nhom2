@@ -212,7 +212,6 @@ public class DAO {
         try {
             CallableStatement statement = connection.prepareCall(QUERY.DATA_WAREHOUSE.LOAD_FILE_INTO_FACT);
             statement.setString(1, fileLocalPath);
-            System.out.println("hello");
             return statement.executeUpdate() != 0 ? true : false;
         } catch (SQLException e) {
             e.printStackTrace();

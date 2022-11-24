@@ -12,52 +12,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87754da8-4a5c-49c7-b502-c07b0703467a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/2022_T4_Nhom2.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/artifacts/weather_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/artifacts/weather_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/artifacts/weather_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../weather/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../weather/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_19_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__commons_net_commons_net_3_8_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__javax_servlet_javax_servlet_api_4_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__jstl_jstl_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__org_jsoup_jsoup_1_15_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../weather/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../weather/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../weather/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/src/main/java/vn/weather/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../weather/weather_ui.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_load/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_load/weather_crawl.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_transform/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_transform/weather_crawl.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/constants/QUERY.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/control/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/control/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/control/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/control/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptExtractSourceTTVN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptLoadStagingDWH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptLoadStagingDWH.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptTransformStaging.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ActionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/constants/QUERY$CONTROL.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/constants/QUERY$CONTROL.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entities/control/Log.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entities/control/Log.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptExtractSourceTTVN.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptLoadStagingDWH.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptLoadStagingDWH.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptTransformStaging.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,6 +165,7 @@
       <workItem from="1669272556064" duration="5000" />
       <workItem from="1669276225824" duration="7000" />
       <workItem from="1669287828803" duration="2932000" />
+      <workItem from="1669292356053" duration="88000" />
     </task>
     <servers />
   </component>

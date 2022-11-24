@@ -102,7 +102,6 @@ public class ActionService {
             dao.loadFileFact(factPath);
         } else {
             boolean success = dao.updateExpired();
-            System.out.println(success);
             if (success) dao.loadFileFact(factPath);
         }
     }
