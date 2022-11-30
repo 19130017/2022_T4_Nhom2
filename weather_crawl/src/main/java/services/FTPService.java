@@ -61,8 +61,7 @@ public class FTPService {
     }
 
     public void downloadSingleFile(FTPClient ftpClient, String remoteFile, String localPath) throws IOException {
-        System.out.println(remoteFile);
-        System.out.println(localPath);
+
         OutputStream os = new BufferedOutputStream(new FileOutputStream(localPath));
         InputStream is = ftpClient.retrieveFileStream(remoteFile);
         byte[] bytesArray = new byte[102400];
@@ -70,6 +69,8 @@ public class FTPService {
         while ((bytesRead = is.read(bytesArray)) != -1) {
             os.write(bytesArray, 0, bytesRead);
         }
+        System.out.println("Download complete");
+
         os.close();
         is.close();
     }

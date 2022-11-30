@@ -1,0 +1,61 @@
+.location-weather {
+  display: flex;
+
+  .card {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.02);
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    a {
+      width: 100%;
+      color: #fff;
+      display: block;
+      text-decoration: none;
+
+      .card-city-title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .card-city-body {
+        display: flex;
+        justify-content: center;
+
+        .precipitation{
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .description {
+        text-align: center;
+        font-size: 16px;
+        line-height: 20px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+      }
+
+      .card-city-footer {
+        display: flex;
+        justify-content: center;
+
+        p {
+          font-size: 3rem;
+          line-height: 20px;
+          margin-top: 12px;
+          margin-bottom: 12px;
+          font-weight: 700;
+          margin-left: 0.3rem;
+        }
+      }
+    }
+  }
+}

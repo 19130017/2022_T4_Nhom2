@@ -50,8 +50,11 @@ public class ActionService {
                 DateDim dateDim = dao.getDateDim(dateService.getDateCrawl(forecastDate));
                 String naturalKey = sourceName + provinceDim.getCodeName() + dateService.getHour() + "h" + dateDim.getId();
                 String description = element.select(".summary-description-detail").text().trim();
-                String minTemp = element.select(".summary-temperature-min").text().trim().substring(0, 2);
-                String maxTemp = element.select(".summary-temperature-max-value").text().trim().substring(0, 2);
+                String minTemp = element.select(".summary-temperature-min").text().trim();
+                if (minTemp.contains("°C")) minTemp = minTemp.substring(0, minTemp.indexOf("°C"));
+                String maxTemp = element.select(".summary-temperature-max-value").text().trim();
+                if (maxTemp.contains("°C")) maxTemp = maxTemp.substring(0, maxTemp.indexOf("°C"));
+
                 String humidity = element.select(".summary-humidity").text().trim().substring(0, 2);
                 String windSpeed = element.select(".summary-speed").text().trim();
                 windSpeed = windSpeed.substring(windSpeed.indexOf(" ") + 1, windSpeed.lastIndexOf(" "));

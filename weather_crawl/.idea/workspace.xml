@@ -12,15 +12,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87754da8-4a5c-49c7-b502-c07b0703467a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../weather/src/main/java/vn/weather/model/Contact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../weather/src/main/java/vn/weather/service/ContactService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_extractTTVN/weather_crawl.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_load/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_load/weather_crawl.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/weather_crawl_transform/weather_crawl.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/weather_crawl_transform/weather_crawl.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/ScriptLoadStagingDWH.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/ScriptLoadStagingDWH.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/scripts/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/scripts/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/services/ActionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ActionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/DAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/DAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/scripts/ScriptLoadStagingDWH.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/ScriptLoadStagingDWH.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/services/FTPService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/FTPService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/scripts/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/scripts/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/services/ActionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/services/ActionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +77,7 @@
       <recent name="constants" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ScriptLoad">
+  <component name="RunManager" selected="Application.Test">
     <configuration name="ScriptExtractSourceTTVN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.ScriptExtractSourceTTVN" />
       <module name="weather_crawl" />
@@ -130,10 +132,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ScriptLoad" />
+        <item itemvalue="Application.Test" />
         <item itemvalue="Application.ScriptTransform" />
         <item itemvalue="Application.ScriptExtractSourceTTVN" />
-        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.ScriptLoad" />
       </list>
     </recent_temporary>
   </component>
@@ -166,6 +168,9 @@
       <workItem from="1669276225824" duration="7000" />
       <workItem from="1669287828803" duration="2932000" />
       <workItem from="1669292356053" duration="88000" />
+      <workItem from="1669475866041" duration="1385000" />
+      <workItem from="1669615348632" duration="173000" />
+      <workItem from="1669619402713" duration="331000" />
     </task>
     <servers />
   </component>
