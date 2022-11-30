@@ -11,4 +11,11 @@ export const getWeatherNoExpired = async () => {
 
 
 
-
+export const getAll = async () => {
+    try {
+        const res = await httpRequest.get("/weather/getAll")
+        return res.data;
+    } catch (error) {
+        console.log(error);
+    }
+}
